@@ -54,7 +54,7 @@
                 <p>По вашему запросу ничего не найдено</p>
                 
             </g:else>
-            <g:form action="search">
+            <g:form action="search" style="border-radius: 5px">
                     <g:submitButton name="searchAgain" value="Новый поиск"/>
             </g:form>
 
