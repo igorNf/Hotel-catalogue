@@ -20,10 +20,10 @@
                  <table>
                       <tr class='prop'>
                           <td valign='top' class='name' style="text-align: right;">
-                              <label for='name' >Отель:</label>
+                              <label for='name'>Отель:</label>
                           </td>
                           <td valign='top' class='value'>
-                              <input type='text' name='name' value='' style="border-radius: 5px" />
+                              <input type='text' name='name' value='' style="border-radius: 5px"/>
                           </td>                          
                      </tr>
                      <tr class='prop'>
@@ -37,7 +37,7 @@
                       <tr>
                         <td></td>
                         <td>                          
-                          <input type="submit" value="Поиск" style="border-radius: 5px"/>                        
+                          <button type="submit">Поиск</button>                        
                         </td>
                       </tr>
                  </table>                 
