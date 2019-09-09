@@ -13,9 +13,7 @@
             <g:link controller="country" action="index">Страны</g:link></span>
         </div>
         
-        <div id="list-hotel" class="content scaffold-list" role="main">          
-            
-
+        <div id="list-hotel" class="content scaffold-list" role="main">
             <g:if test="${hotelList.size() > 0}">                
                 <table class="myTable" >
                     <p>Найдено отелей: <strong>${hotelList.size()}<strong></p>
