@@ -6,23 +6,17 @@
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
     <body>
-        <!-- <a href="#list-hotel" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="/hotel/search"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-                
-            </ul>
-        </div> -->
-        <div id="list-hotel" class="content scaffold-list" role="main">
-            
-            <g:if test="${flash.message}">
-                <div class="message" role="status">${flash.message}</div>
-            </g:if>
+        <div class="nav">            
+            <span class="menuButton">
+            <a href="/hotel/index">Все отели</a></span>
+            <span class="menuButton">
+            <g:link controller="country" action="index">Страны</g:link></span>
+        </div>
+        
+        <div id="list-hotel" class="content scaffold-list" role="main">          
             
 
-            <g:if test="${hotelList.size() > 0}">
-                
+            <g:if test="${hotelList.size() > 0}">                
                 <table class="myTable" >
                     <p>Найдено отелей: <strong>${hotelList.size()}<strong></p>
                     <tr>
@@ -32,8 +26,7 @@
                             <th>
                                 Название
                             </th>
-                    </tr>
-                   
+                    </tr>                   
                     <g:each in="${hotelList}" var="hotel">                    
                         <tr>
                             <td class="myTd" align="center" valign="middle">                            
@@ -51,16 +44,17 @@
                 </table>
             </g:if>
             <g:else>
-                <p>По вашему запросу ничего не найдено</p>
+
+                <p align="center">По вашему запросу ничего не найдено</p>
                 
             </g:else>
-            <g:form action="search" style="border-radius: 5px">
-                    <g:submitButton name="searchAgain" value="Новый поиск"/>
+            <g:form action="search" >                    
+                    <button type="submit" style="margin-left: 45%">Новый поиск</button>    
             </g:form>
 
-            <div class="pagination">
+            <!-- <div class="pagination">
                 <g:paginate total="${hotelCount ?: 0}" />
-            </div>
+            </div> -->
         </div>
     </body>
 </html>
