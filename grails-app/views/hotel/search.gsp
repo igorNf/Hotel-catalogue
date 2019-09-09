@@ -23,7 +23,7 @@
                               <label for='name' >Отель:</label>
                           </td>
                           <td valign='top' class='value'>
-                              <input type='text' name='name' value='' style="border-radius: 5px" />
+                              <input type='text' name='name' value='' style="border-radius: 5px" required/>
                           </td>                          
                      </tr>
                      <tr class='prop'>
