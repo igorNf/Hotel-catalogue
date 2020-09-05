@@ -18,7 +18,6 @@ class BootStrap {
         new Hotel(name: 'Fghjkl',  country: russia, stars: 5, homePage: 'https://f.com').save()
 
         new Hotel(name: 'Cambria Hotel',  country: usa, stars: 4, homePage: 'https://cambria.com').save()
-        new Hotel(name: 'Cambria Hotel',  country: usa, stars: 4, homePage: 'https://cambria.com').save()
         
     }
 
