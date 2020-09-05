@@ -31,7 +31,7 @@
                               <label for='con'>Страна:</label>
                           </td>
                           <td valign='top' class='value'>                              
-                              <g:select name="con" from="${countryList}" value="" style="border-radius: 5px; width: 185px"/>
+                              <g:select name="country" from="${countryList}" optionKey="id" optionValue="name" value="1" style="border-radius: 5px; width: 185px"/>
                           </td>
                       </tr> 
                       <tr>

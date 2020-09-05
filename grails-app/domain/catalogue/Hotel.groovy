@@ -1,6 +1,7 @@
 package catalogue
 
 class Hotel {
+    Integer id
 	String name
 	Country country
 	int stars

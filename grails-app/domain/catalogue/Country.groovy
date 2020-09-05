@@ -1,6 +1,7 @@
 package catalogue
 
 class Country {
+    Integer id
 	String name
 	String capital
 

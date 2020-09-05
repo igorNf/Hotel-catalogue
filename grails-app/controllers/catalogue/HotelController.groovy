@@ -9,7 +9,7 @@ class HotelController {
     HotelService hotelService
 
 
-	static defaultAction = "search"
+    static defaultAction = "search"
 
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -103,12 +103,12 @@ class HotelController {
     }
 
     def search = {
-    	[countryList: Country.list(params)]
+        [countryList: Country.list(params)]
     }
 
     def showSearchResults = {
     
-    	def country = Country.get(params.country)
+        def country = Country.get(params.country)
 
         def hotels = Hotel.createCriteria().list {
             eq("country", country)
@@ -116,6 +116,6 @@ class HotelController {
         }
 
         [hotelList: hotels]
-	}
+    }
 
 }
