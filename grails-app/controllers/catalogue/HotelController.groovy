@@ -108,10 +108,14 @@ class HotelController {
 
     def showSearchResults = {
     
-    	 def cont = Country.findByName(params.con)
-    	 // def hotels = cont ? Hotel.findAllByNameIlikeAndCountry("%" + params.name + "%", cont, [sort: ["stars": "desc", "name": "asc"]]) : []
-    	 def hotels = Hotel.findAllByNameIlikeAndCountry("%" + params.name + "%", cont, [sort: ["stars": "desc", "name": "asc"]])
-         [hotelList: hotels]
+    	def country = Country.get(params.country)
+
+        def hotels = Hotel.createCriteria().list {
+            eq("country", country)
+            ilike("name", "%${params.name}%")
+        }
+
+        [hotelList: hotels]
 	}
 
 }
